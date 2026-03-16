@@ -1,0 +1,6 @@
+@FractooAPI_HostAddress = http://localhost:5207
+
+GET {{FractooAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
