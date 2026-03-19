@@ -120,7 +120,14 @@ export class LoginComponent {
       },
       error: (err) => {
         this.loading = false;
-        this.error = err.error?.message || 'Login failed. Please try again.';
+        if (err.status === 0) {
+          this.error = 'Unable to connect to the server.';
+        } else if (err.error?.errors) {
+          const firstKey = Object.keys(err.error.errors)[0];
+          this.error = err.error.errors[firstKey][0];
+        } else {
+          this.error = err.error?.message || 'Login failed. Please try again.';
+        }
       }
     });
   }

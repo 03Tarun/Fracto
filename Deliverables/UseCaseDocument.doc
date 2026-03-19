@@ -1,0 +1,84 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head><title>Use Case Document</title>
+<style>
+body { font-family: Calibri, sans-serif; font-size: 11pt; }
+h1 { font-size: 18pt; color: #2F5496; }
+h2 { font-size: 16pt; color: #2F5496; }
+h3 { font-size: 14pt; color: #2F5496; }
+strong { font-weight: bold; }
+p { margin-bottom: 15px; }
+</style>
+</head>
+<body>
+<h1>Fractoo - Online Doctor Appointment Booking Platform</h1>
+<h2>Use Case Document</h2>
+
+<h3>1. User Stories (Patient)</h3>
+
+<p><strong>1.1 User Authentication</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to log in, log out, and register into the application securely.<br>
+- <strong>Pre-Conditions:</strong> User must provide valid email and password format.<br>
+- <strong>Post-Conditions:</strong> System creates an account and logs the user in via JWT token.</p>
+
+<p><strong>1.2 City Selection & Doctor Search</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to select a city, desired appointment date, and a specific medical specialization to search for available doctors.</p>
+
+<p><strong>1.3 View Available Doctors</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to view available doctors in the selected specialization for the chosen date.<br>
+- <strong>Rules:</strong> Doctors must have valid consultation fees and available unbooked timeslots.</p>
+
+<p><strong>1.4 Filter by Ratings</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to filter the displayed doctors based on their average patient ratings.</p>
+
+<p><strong>1.5 Doctor Selection & View Time Slots</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I can click on a doctor from the list to view their detailed profile, ratings, and a grid of available and unavailable time slots for the selected date.</p>
+
+<p><strong>1.6 Book Appointment</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to select an open time slot and book an appointment with the selected doctor.<br>
+- <strong>Post-Conditions:</strong> A confirmed booking is created, and the time slot is rendered unavailable for others.</p>
+
+<p><strong>1.7 Receive Confirmation</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should receive an immediate real-time toast notification (via SignalR) confirming my booking success.</p>
+
+<p><strong>1.8 Cancel Appointment</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I should be able to navigate to my appointments list and cancel an upcoming appointment.<br>
+- <strong>Post-Conditions:</strong> The system marks the appointment as 'Cancelled' and frees up the time slot.</p>
+
+<p><strong>1.9 Rate and Review Doctor</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> Post-appointment, users can rate (1-5 stars) and review the doctor.<br>
+- <strong>Post-Conditions:</strong> The doctor's average rating is automatically recalculated.</p>
+
+<p><strong>1.10 Upload Profile Image</strong><br>
+- <strong>Actor:</strong> Patient<br>
+- <strong>Description:</strong> As a user, I can upload a profile picture from my device to personalize my account.</p>
+
+<hr>
+
+<h3>2. Admin Stories</h3>
+
+<p><strong>2.1 Admin Authentication</strong><br>
+- <strong>Actor:</strong> System Administrator<br>
+- <strong>Description:</strong> As an admin, I should be able to log in with an admin-level account to access the administrative dashboard.</p>
+
+<p><strong>2.2 CRUD on Users</strong><br>
+- <strong>Actor:</strong> System Administrator<br>
+- <strong>Description:</strong> As an admin, I can view, update, and delete all user records from the system. (Cascade delete removes their appointments and ratings).</p>
+
+<p><strong>2.3 CRUD on Doctors & Specializations</strong><br>
+- <strong>Actor:</strong> System Administrator<br>
+- <strong>Description:</strong> As an admin, I can add new specializations, onboard new doctors specifying their city, fee, and credentials, and manage existing doctor records (including uploading profile images for doctors).</p>
+
+<p><strong>2.4 Manage Appointments</strong><br>
+- <strong>Actor:</strong> System Administrator<br>
+- <strong>Description:</strong> As an admin, I can view all system-wide appointments. I should be able to cancel conflicting appointments or confirm pending ones, generating real-time SignalR notifications for users.</p>
+</body>
+</html>

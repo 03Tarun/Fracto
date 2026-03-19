@@ -63,7 +63,7 @@ export class RegisterComponent {
   error = '';
   loading = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
   register(): void {
     this.loading = true;

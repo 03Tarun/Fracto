@@ -161,3 +161,4 @@ E:\vs code\Fractoo\FractooAPI\obj\Debug\net10.0\FractooAPI.pdb
 E:\vs code\Fractoo\FractooAPI\obj\Debug\net10.0\FractooAPI.genruntimeconfig.cache
 E:\vs code\Fractoo\FractooAPI\obj\Debug\net10.0\ref\FractooAPI.dll
 E:\vs code\Fractoo\FractooAPI\bin\Debug\net10.0\FractooAPI.staticwebassets.runtime.json
+E:\vs code\Fractoo\FractooAPI\obj\Debug\net10.0\FractooAPI.sourcelink.json

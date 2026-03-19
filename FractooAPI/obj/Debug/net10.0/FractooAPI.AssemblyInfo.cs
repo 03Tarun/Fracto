@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FractooAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83e93f31e18b89fa85d6107218905c67a3523cd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FractooAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FractooAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
